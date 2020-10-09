@@ -21,19 +21,7 @@ foo ( char *arg )
 		fprintf(stderr, "tmalloc failure\n");
 		exit(EXIT_FAILURE);
 	} 
-/*
-	printf("p before %p\n", p);
-	printf("%p\n", q);
-	printf("the value of tage between q and p (frist 4 bytes)is  %02x", *(q-8));
-	printf("%02x", *(q-7));
-	printf("%02x", *(q-6));
-	printf("%02x\n", *(q-5));
 	
-	printf("the value of tage between q and p (second 4 bytes)is  %02x", *(q-4));
-	printf("%02x", *(q-3));
-	printf("%02x", *(q-2));
-	printf("%02x\n", *(q-1));
-*/
 	tfree(p);
 	tfree(q);
 	
@@ -42,14 +30,11 @@ foo ( char *arg )
 		fprintf(stderr, "tmalloc failure\n");
 		exit(EXIT_FAILURE);
 	}
-
 	
 	strncpy(p, arg, 192);
-	//printf("p after %s\n", p);
-	//int * rt = (int *)0x40a4fe68;
-	//printf("before %p\n",*rt);
+	
 	tfree(q);
-	//printf("after %p\n",*rt);
+	
 	return (0);
 }
 

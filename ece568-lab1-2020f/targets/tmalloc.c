@@ -3,7 +3,7 @@
  *
  * Inspired by K&R2 malloc() and Doug Lea malloc().
  */
-#include <stdio.h>
+
 #include <string.h>
 #include <sys/mman.h>
 #include <unistd.h>
@@ -104,31 +104,17 @@ void *tmalloc(unsigned nbytes)
 void tfree(void *vp)
 {
   CHUNK *p, *q;
-  printf("free starting vp = %x\n",vp);
+
   if (vp == NULL)
     return;
-  int * rt = (int *)0x40a4fe68;
-  int * rt4 = (int *)0x0104ee43;
-  printf("shellcode before overwrite %08x\n",*rt4);
-
-  printf("return address before overwrite %p\n",*rt);
 
   p = TOCHUNK(vp);
   CLR_FREEBIT(p);
   q = (CHUNK *)(uint64_t)p->s.l;
-  printf("p= %x\n",p);
-  printf("q= %x\n",q);
-  
  if (q) {
   }
-  
   if (q != NULL && GET_FREEBIT(q)) /* try to consolidate leftward */
     {
-      
-      printf("q left = %x\n",*q);
-      printf("p->s.r = %x\n",p->s.r);
-      printf("(p->s.r))->s.l = %x\n",((CHUNK *)(uint64_t)(p->s.r))->s.l);
-
       CLR_FREEBIT(q);
       q->s.r      = p->s.r;
       ((CHUNK *)(uint64_t)(p->s.r))->s.l = (uint32_t)(uint64_t)q;
@@ -136,24 +122,14 @@ void tfree(void *vp)
       p = q;
     }
   q = RIGHT(p);
-  
   if (q != NULL && GET_FREEBIT(q)) /* try to consolidate rightward */
     {
-      printf("q right add = %x\n",q);
-      printf("q right content = %x\n",*q);
-      printf("q->s.r = %x\n",q->s.r);
-      printf("q->s.r)->s.l = %x\n",((CHUNK *)(uint64_t)q->s.r)->s.l);
       CLR_FREEBIT(q);
       p->s.r      = q->s.r;
       ((CHUNK *)(uint64_t)q->s.r)->s.l = (uint32_t)(uint64_t)p;
       SET_FREEBIT(q);
     }
   SET_FREEBIT(p);
-    printf("shellcode after overwrite %08x\n",*rt4);
-
-    printf("return address after overwrite %p\n",*rt);
-
-    printf("free end \n");
 }
 
 void *trealloc(void *vp, unsigned newbytes)

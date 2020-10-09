@@ -17,13 +17,9 @@ foo ( char *arg )
 	a = arg;
 	b = buf;
 	
-	for (i = 0; i <= len; i++){
+	for (i = 0; i <= len; i++)
 		*b++ = *a++;
-		printf("the i = %d and len is %d\n",i,len);
-		printf("the content is  %x \n",*a);
-		printf("the address of b %p \n",(b));
-	}
-
+	
 	return (0);
 }
 
