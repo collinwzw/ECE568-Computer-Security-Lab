@@ -8,9 +8,9 @@ bar ( char * arg, char * targ, int ltarg )
 	int	len, i;
 
 	len = strlen(arg);
-	if (len > ltarg) len = ltarg;
+	if (len > ltarg) len = ltarg;// if we put 76, it's 76
 
-	targ += strlen(targ);
+	targ += strlen(targ);// 8
 	for (i = 0; i <= len; i++) targ[i] = arg[i];
 
 	return (0);
