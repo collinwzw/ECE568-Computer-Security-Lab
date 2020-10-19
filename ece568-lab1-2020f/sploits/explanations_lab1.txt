@@ -1,0 +1,35 @@
+#Ziwen Wang,1007350242,collinziwen@mail.utoronto.ca
+#Mauris Winata,1007546023,mauris.winata@mail.utoronto.ca
+
+what the vulnerability was and how you exploited it. 
+
+target1:
+The vulnerability is strcpy() in function foo. Which copys input string to buff located at lab_main function without checking the input length. 
+The exploited is that we input length of str that has longer length than buffer to cause the buffer overflow.
+We make our attack string in the format that allows the string overwrite the return address of lab_main to jump to location of shellcode.
+
+target2:
+The vulnerability is in function foo, the variable p is large enough to allow attack string overwrite the variable j and len.
+The exploited is to modify the content of j for the loop jump location of len and then overwrite the length to larger number so we
+can overwrite return address of foo to cause buffer overflow.
+
+target3:
+The vulnerability is in function foo, where we call function bar, the string length should be the same as the input buffer size. The size of buffer is 64 and
+string length is 80. The exploited is we make our attack string overwrite the return address of foo to cause buffer overflow.
+
+
+target4:
+The vulnerability is length limit is 201 in function foo, where it should be size of buf. The exploited is we can overwrite the length variable so that our attack
+string can overwrite the return address of foo to cause buffer overflow.
+
+target5:
+The vulnerability is that there is format string vulnerability in foo caused by snprintf. The exploited is that we firstly find return address of foo, we calculate the address
+of the shellcode. We then put %x's to move the pointer pointing at the beginning of local variable formatString. Since we put return address in the beginning of formatString,
+the pointer will dereference that address and write number of bytes we have write before we put %n. We control the numbers of character written so we can overwrite the return address 
+of foo to the addres of shellcode.
+
+target6:
+The vulnerability is double free vulnerability in function foo. The exploited is format our attackstring so it has two fake tags. One fake tag is in the location of old q tag, 
+its previous is pointing to another fake tag before the location of shellcode and its next contains return address of foo. The second fake tag's previous contains jump shellcode
+and its next pointer does not matter since it will be overwritten by consolidation. When free consolidates, the return address of foo will be overwritten to address of second fake tag, 
+which has instructions to jumps to the shellcode.

