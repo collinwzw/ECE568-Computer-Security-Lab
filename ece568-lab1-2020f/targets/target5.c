@@ -11,9 +11,9 @@ foo ( char *arg )
 	// A bit of a hack, to make things easier for the 64-bit addresses: we'll copy
 	// the format string into a local buffer, and then skip the first 60 characters
 	// of it when feeding it into snprintf(...)
-	
+
 	memcpy(formatString, arg, 256);
-	snprintf(buf, sizeof(buf), &formatString[60]);
+	snprintf(buf, sizeof(buf), &formatString[60],5);
 
 	return (0);
 }
