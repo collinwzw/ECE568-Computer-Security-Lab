@@ -1,0 +1,18 @@
+#Ziwen Wang,1007350242,collinziwen@mail.utoronto.ca
+#Mauris Winata,1007546023,mauris.winata@mail.utoronto.ca
+
+Client:
+- initialize the socket
+- initialize the ssl method and context 
+  - remove support for sslv2
+  - set hash algorithm to SHA1
+- open socket
+- set the bio
+- attempt to establish a connection to the server
+- check the certificate to see if it is valid and to extract server information (CA, email, CA issuer)
+- write the message to the server while checking for premature shutdown
+- read the message from the server while checking for premature shutdown
+- gracefully shut down the connection
+  - call SSL_shutdown(), wait until the server acknowledges, then terminate the connection
+
+Server:
