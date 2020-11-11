@@ -55,7 +55,9 @@ int main(int argc, char **argv)
     /* initialize the file name of key pair file */
     char CertFile[] = "568ca.pem";
     char KeyFile[] = "alice.pem";
-
+    //for testing
+//    char CertFile[] = "ca_cert.pem";
+//    char KeyFile[] = "server_cert.pem";
     /* initialzing ssl context and method */
     const SSL_METHOD *method;
     SSL_CTX *ctx;
@@ -69,14 +71,15 @@ int main(int argc, char **argv)
 //    SSL_CTX_set_verify(ctx, SSL_VERIFY_PEER | SSL_VERIFY_FAIL_IF_NO_PEER_CERT, NULL);
 //    SSL_CTX_set_verify_depth(ctx, 4);
 
-    // removing ssv2 from options
+    // removing sslv2 from options
     SSL_CTX_set_options(ctx, SSL_OP_NO_SSLv2);
 
     if (ctx == NULL) {
         fprintf(stderr, "ctx is NULL\n");
         ERR_print_errors_fp(stderr);
-        abort();
+        //abort();
     }
+    //set hash algorithm to SHA1
     SSL_CTX_set_cipher_list(ctx, "SHA1");
 
     if (SSL_CTX_load_verify_locations(ctx, CertFile, NULL) != 1)
@@ -90,7 +93,7 @@ int main(int argc, char **argv)
     {
         fprintf(stderr, "certificate file is not correctly set\n");
         ERR_print_errors_fp(stderr);
-        abort();
+        //abort();
     }
     /* set the private key from KeyFile (may be the same as CertFile) */
     SSL_CTX_set_default_passwd_cb_userdata(ctx, "password");
@@ -98,13 +101,13 @@ int main(int argc, char **argv)
     {
         fprintf(stderr, "Private key file is not correctly set\n");
         ERR_print_errors_fp(stderr);
-        abort();
+        //abort();
     }
     /* verify private key */
     if (!SSL_CTX_check_private_key(ctx))
     {
         fprintf(stderr, "Private key does not match the public certificate\n");
-        abort();
+        //abort();
     }
 
     /*get ip address of the host*/
@@ -137,12 +140,32 @@ int main(int argc, char **argv)
     }
     SSL_set_bio(ssl, bio, bio);
 
-    //handshake
     int sslConnect = SSL_connect(ssl);
+    X509 *cert;
+    cert = SSL_get_peer_certificate(ssl);
+    int r = 0;
+
+    if (cert == NULL){
+        r = 1;
+    }
+    else if (cert != NULL && SSL_get_verify_result(ssl) ==  X509_V_OK ){
+        r= 2;
+    }
+    else {
+        // verify result is bad
+        r = 0;
+    }
+    //handshake
+
+
     //check the certificate
-    int cc = checkCertificate(ssl);
     //if certificate error
-    if (cc == 0){
+    printf("%d\n",r);
+    if (r == 0){
+        printf(FMT_NO_VERIFY);
+        clientShutdown(sock,ssl,ctx);
+    }
+    if (r == 1 && sslConnect > 0){
         printf(FMT_NO_VERIFY);
         clientShutdown(sock,ssl,ctx);
     }
@@ -171,7 +194,7 @@ int main(int argc, char **argv)
             printf( FMT_INCORRECT_CLOSE);
         }
         else {
-            printf("read check\n");
+            printf("write check\n");
             printf(FMT_INCORRECT_CLOSE);
         }
         clientShutdown(sock,ssl,ctx);
@@ -192,7 +215,7 @@ int main(int argc, char **argv)
         }
         clientShutdown(sock, ssl, ctx);
     }
-
+    buf[strlen(buf)-1] = '\0';
     printf(FMT_OUTPUT,secret, buf); // printing out the result from server
     clientShutdown(sock,ssl,ctx);
 

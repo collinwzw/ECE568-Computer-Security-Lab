@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aa86fabc-0da5-47ee-ab65-928f58951bfa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ece568-lab2-2020f/alice1.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ece568-lab2-2020f/bob1.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/lab3_part1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/lab3_part2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/lab3_part3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/lab3_part4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/webgoat.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ece568-lab2-2020f/client.c" beforeDir="false" afterPath="$PROJECT_DIR$/ece568-lab2-2020f/client.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ece568-lab2-2020f/explanations_lab2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ece568-lab2-2020f/explanations_lab2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ece568-lab2-2020f/server.c" beforeDir="false" afterPath="$PROJECT_DIR$/ece568-lab2-2020f/server.c" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="clangTidyViaClangd" value="false" />
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1j6onwL9sbObnr03A1iohb99sqj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lab3" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="CLionExternalConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\C-workspace\ECE568-Computer-Security-Lab\ece568-lab2-2020f" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\C-workspace\ECE568-Computer-Security-Lab\lab3" />
+      <recent name="C:\Users\ASUS\C-workspace\ECE568-Computer-Security-Lab\ece568-lab2-2020f" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Makefile Application.make">
+    <configuration default="true" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" WORKING_DIR="file://$PROJECT_DIR$/ece568-lab2-2020f" PASS_PARENT_ENVS_2="true" version="1" RUN_PATH="$PROJECT_DIR$/ece568-lab2-2020f/Makefile">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="make" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" WORKING_DIR="file://$PROJECT_DIR$/ece568-lab2-2020f" PASS_PARENT_ENVS_2="true" version="1" RUN_PATH="$PROJECT_DIR$/ece568-lab2-2020f/Makefile">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="CMakeRunConfiguration" factoryName="Application" nameIsGenerated="true" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" RUN_PATH="$PROJECT_DIR$/ece568-lab2-2020f/Makefile" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.Unnamed" />
+      <item itemvalue="Makefile Application.make" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aa86fabc-0da5-47ee-ab65-928f58951bfa" name="Default Changelist" comment="" />
+      <created>1603134072712</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603134072712</updated>
+      <workItem from="1603134073866" duration="4544000" />
+      <workItem from="1603217552926" duration="10818000" />
+      <workItem from="1603476546081" duration="14103000" />
+      <workItem from="1603490776321" duration="23000" />
+      <workItem from="1603552352473" duration="702000" />
+      <workItem from="1603807518411" duration="7116000" />
+      <workItem from="1604020806553" duration="10184000" />
+      <workItem from="1604079528749" duration="10267000" />
+      <workItem from="1604360888244" duration="610000" />
+      <workItem from="1604683034388" duration="13385000" />
+      <workItem from="1604947719092" duration="8132000" />
+      <workItem from="1605116688709" duration="29000" />
+      <workItem from="1605121005716" duration="12301000" />
+    </task>
+    <task id="LOCAL-00001" summary="client implementation">
+      <created>1603490683095</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603490683095</updated>
+    </task>
+    <task id="LOCAL-00002" summary="lab 2">
+      <created>1604951654081</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604951654081</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="client implementation" />
+    <MESSAGE value="lab 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab 2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="448" y="166" key="#Deployment" timestamp="1605121598448">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="448" y="166" key="#Deployment/0.0.1920.1040@0.0.1920.1040" timestamp="1605121598448" />
+    <state x="605" y="195" key="#Options" timestamp="1603134614864">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="605" y="195" key="#Options/0.0.1920.1040@0.0.1920.1040" timestamp="1603134614864" />
+    <state x="432" y="153" key="#SSH_Configurations" timestamp="1605121378934">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="432" y="153" key="#SSH_Configurations/0.0.1920.1040@0.0.1920.1040" timestamp="1605121378934" />
+    <state x="620" y="154" width="1092" height="740" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603135494906">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="620" y="154" width="1092" height="740" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603135494906" />
+    <state x="691" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605126310106">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="691" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605126310106" />
+    <state x="723" y="350" key="#com.intellij.tools.ToolEditorDialog" timestamp="1603135224416">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="723" y="350" key="#com.intellij.tools.ToolEditorDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603135224416" />
+    <state x="92" y="92" width="1736" height="856" key="DirDiffDialog" timestamp="1603220103849">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="DirDiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603220103849" />
+    <state x="1024" y="257" key="EnvironmentVariablesDialog" timestamp="1603135023805">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1024" y="257" key="EnvironmentVariablesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603135023805" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1605116719199">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605116719199" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1603135278381">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603135278381" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604951657558">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604951657558" />
+    <state x="659" y="421" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604951674534">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="659" y="421" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604951674534" />
+    <state x="853" y="256" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey" timestamp="1603135225068">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="853" y="256" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey/0.0.1920.1040@0.0.1920.1040" timestamp="1603135225068" />
+    <state x="662" y="252" width="596" height="536" key="find.popup" timestamp="1603136156015">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="662" y="252" width="596" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603136156015" />
+    <state x="1143" y="235" key="ftp.server.browser" timestamp="1603134318262">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1143" y="235" key="ftp.server.browser/0.0.1920.1040@0.0.1920.1040" timestamp="1603134318262" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604692029090">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1604692029090" />
+  </component>
+</project>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7b9181cc-551e-46b7-a7ef-5ade58d5ac67" name="ECF">
+        <fileTransfer rootFolder="/u/a/wang2213/Desktop/Workspace/ECE568-Computer-Security-Lab" accessType="SFTP" host="p124.ecf.utoronto.ca" port="22" sshConfigId="a268cb42-2333-498a-abe5-3245449e5a38" sshConfig="wang2213@p124.ecf.utoronto.ca:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

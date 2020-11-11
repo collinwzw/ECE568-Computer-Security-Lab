@@ -42,20 +42,27 @@ int main(int argc, char **argv) {
 
     SSL_library_init();
     OpenSSL_add_all_algorithms();
+
+    //Test
+    //method =  (SSL_METHOD *)SSLv2_server_method();
     method = SSLv23_server_method();
+
     ctx = SSL_CTX_new(method);
 
 
     if (ctx == NULL) {
         fprintf(stderr, "ctx is NULL\n");
         ERR_print_errors_fp(stderr);
-        abort();
+        //abort();
     }
 
     SSL_CTX_set_verify(ctx, SSL_VERIFY_PEER | SSL_VERIFY_FAIL_IF_NO_PEER_CERT, NULL);
     SSL_CTX_set_verify_depth(ctx, 4);
 
     SSL_CTX_set_cipher_list(ctx, "SSLv2:SSLv3:TLSv1");
+
+    //Test
+    //SSL_CTX_set_cipher_list(ctx, "  ALL:!SHA1");
 
     if (SSL_CTX_load_verify_locations(ctx, CertFile, NULL) != 1)
         ERR_print_errors_fp(stderr);
@@ -77,7 +84,7 @@ int main(int argc, char **argv) {
     {
         fprintf(stderr, "Private key file is not correctly set\n");
         ERR_print_errors_fp(stderr);
-        abort();
+        //abort();
     }
 
     /* verify private key */
@@ -87,10 +94,6 @@ int main(int argc, char **argv) {
         //abort();
     }
     /* End of initialize SSL context*/
-
-//For testing:
-//    SSLv23_server_method();
-//    LoadCertificates(ctx, CertFile, KeyFile);
 
 
     /*Parse command line arguments*/

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="p124.ecf.utoronto.ca" id="a268cb42-2333-498a-abe5-3245449e5a38" port="22" nameFormat="DESCRIPTIVE" username="wang2213" />
+    </configs>
+  </component>
+</project>

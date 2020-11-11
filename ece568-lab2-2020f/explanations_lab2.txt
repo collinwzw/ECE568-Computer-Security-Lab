@@ -6,9 +6,10 @@ Client:
 - initialize the ssl method and context 
   - remove support for sslv2
   - set hash algorithm to SHA1
+  - set the key file and CA file
 - open socket
 - set the bio
-- attempt to establish a connection to the server
+- attempt to establish a connection to the server (handshake)
 - check the certificate to see if it is valid and to extract server information (CA, email, CA issuer)
 - write the message to the server while checking for premature shutdown
 - read the message from the server while checking for premature shutdown
@@ -16,3 +17,18 @@ Client:
   - call SSL_shutdown(), wait until the server acknowledges, then terminate the connection
 
 Server:
+- initialize the socket
+- initialize the ssl method and context
+  - set server method to SSLv2, SSLv3, TLSv1
+  - set cipher list to SSLv2, SSLv3, TLSv1
+  - set the key file and CA file
+- open socket
+- fork a child to handle the connection
+- set the bio
+- attempt to establish a connection to the client (handshake)
+- check the certificate to see if it is valid and to extract client information (CA, email)
+- read the message from the client while checking for premature shutdown
+- write the message to the client while checking for premature shutdown
+- gracefully shut down the connection
+  - call SSL_shutdown(), wait until the server acknowledges, then terminate the connection
+- wait for next client
