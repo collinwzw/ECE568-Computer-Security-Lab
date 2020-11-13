@@ -1,0 +1,2 @@
+101;  UPDATE employee SET salary=555000 where userid = 101;
+101; CREATE TRIGGER updateEmail BEFORE INSERT ON employee FOR EACH ROW BEGIN UPDATE employee SET email=ece568-2020f@utoronto.ca WHERE userid = NEW.userid
