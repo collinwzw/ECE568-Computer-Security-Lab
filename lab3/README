@@ -12,8 +12,9 @@ Part 2 Explanation:
 The site is vulnerable to a reflected XSS attack. If entering an invalid credit card pin, the site will display the contents
 of the pin field without any checks. Thus, the attacker can input arbitrary javascript/HTML into the pin field and the website 
 will execute whatever is entered. However, the second vulnerability is that the URL can include the "input2" field in order to 
-automatically populate the pin entry and run the arbitrary javascript/HTML. Thus, the attacker can extract the contents of the 
-credit card number field and send the value to another domain.
+automatically populate the pin entry and run the arbitrary javascript/HTML. When the buy button is pressed, the input 2 field is 
+not updated in the URL so it will always load the phishing page. Thus, the attacker can extract the contents of the 
+credit card number field and send the value to another domain when the victim presses buy.
 
 Part 3 Explanation:
 The vulnerability here is that the transfer page does not have any sort of check, authentication or confirmation whenever a user is transferring. 
