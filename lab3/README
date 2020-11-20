@@ -1,11 +1,58 @@
+#Ziwen Wang,1007350242,collinziwen@mail.utoronto.ca
+#Mauris Winata,1007546023,mauris.winata@mail.utoronto.ca
 
+Part 1 Explanation:
+The search functionality of this webpage is vulnerable to XSS attacks. In particular, if a result is not found, 
+then the website has an HTML element which copies the search bar contents directly into an HTML element. There is no 
+filtering performed so arbitrary javascript/HTML can be pasted in the search field and the website will display the 
+contents directly. One can generate a code snippet which involves a form including a fake username and password field
+so that the user will enter their username and password to be sent to the attacker.
 
+Part 2 Explanation:
+The site is vulnerable to a reflected XSS attack. If entering an invalid credit card pin, the site will display the contents
+of the pin field without any checks. Thus, the attacker can input arbitrary javascript/HTML into the pin field and the website 
+will execute whatever is entered. However, the second vulnerability is that the URL can include the "input2" field in order to 
+automatically populate the pin entry and run the arbitrary javascript/HTML. Thus, the attacker can extract the contents of the 
+credit card number field and send the value to another domain.
 
-8.
+Part 3 Explanation:
+The vulnerability here is that the transfer page does not have any sort of check, authentication or confirmation whenever a user is transferring. 
+Thus, the victim can be sent an email which loads a fake image containing a link to the transfer page such that a transfer request
+is made from the user's account. When the email is opened, the image link is loaded, the CSRF attack takes place and the transfer 
+is made.
+
+Part 4 Explanation:
+The vulnerability in this part is that the transfer page does not properly authenticate the user with a token. The process to transfer
+is to first load the transfer page, select the amount you want to transfer and then confirm the transaction on the confirmation page. Thus, an email 
+can be constructed to load two fake images containing two fake links. The first fake link is the transfer page (similar to part
+3) and the second page is the confirmation page. This second step will bypass the confirmation required to transfer. When the email is opened
+the CSRF bypass attack will first initiate a transfer and then confirm the transfer.
+
+Part 5 Explanation:
+The process to transfer is to first load the transfer page, select the amount you want to transfer and then confirm the transfer on the following page. 
+However, in this exercise, the website sends a token in order to ensure that the transfer is legitimate. However, the vulnerability is that the token
+is embedded in the HTML document of the transfer page. Thus, the attacker can get the token element required to load the proper transfer confirmation
+page and confirm the transfer. Thus, an email can be constructed to load a fake image containing a link to the transfer page. The link is the 
+transfer page (similar to part 3 and 4). When it loads the link, a function is called in order to extract the token value from it. The function 
+will then open the appropriate URL required to confirm the transfer using the token value. 
+
+Part 6 Explanation:
+This query is vulnerable to SQL injection. The search field is copied directly into the SQL query without any checks involved
+so the contents of the search field can essentially extend the SQL logic in order to get the query to return unintended results.
+One can include an 'or' statement in the logic such that every entry is true in order to print out the whole database using the 
+select functionality. 
+
+Part 7 Explanation:
+Similarly to part 6, this query is vulnerable to SQL injection because there is no check to validate the entry into the field. For
+the first portion of the problem, one can input a valid id number and then call the 'UPDATE' command in order to change the value of the salary for a particular user.
+For the second portion of the assignment, one can input a valid id number and then create the appropriate trigger required. 
+
+Part 8 Explanation:
 So we use multi query to try our guessed pin for the given credit card number.
-The method we used is binary search starting from 2^31 and keep half it down if the
-query give us invalid account. Once we are in very small range, we change the query
-from '>' to '=' and try to validate the possible number in that range.
+The method we used is binary search starting from 2^31 and keep halving the number down if the
+query gives us invalid account. Once we are in very small range, we change the query
+from '>' to '=' and try to validate the possible numbers in that range. Using this method, we get the
+pin value of 3318.
 
 101; SELECT * FROM credit WHERE cc_number  = 1234123412341234 AND pin > 2147483648
 101; SELECT * FROM credit WHERE cc_number  = 1234123412341234 AND pin > 1073741824
