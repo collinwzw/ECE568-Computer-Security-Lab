@@ -28,17 +28,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa86fabc-0da5-47ee-ab65-928f58951bfa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ece568-lab2-2020f/alice1.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ece568-lab2-2020f/bob1.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/lab3_part1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/lab3_part2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/lab3_part3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/lab3_part4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/test" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/webgoat.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ece568-lab2-2020f/client.c" beforeDir="false" afterPath="$PROJECT_DIR$/ece568-lab2-2020f/client.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ece568-lab2-2020f/explanations_lab2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ece568-lab2-2020f/explanations_lab2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ece568-lab2-2020f/server.c" beforeDir="false" afterPath="$PROJECT_DIR$/ece568-lab2-2020f/server.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/part2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab4/dnsproxy_starter_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab4/part1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab4/script.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_11_9_14_54_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_11_9_14_54__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/lab3_part1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/part1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/lab3_part2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/lab3_part3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/part3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/lab3_part4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/part4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/lab3_part5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/part5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/lab3_part6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/part6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/lab3_part7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/part7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/test" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/test" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,14 +63,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lab3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lab4" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -78,11 +82,12 @@
     <property name="settings.editor.selected.configurable" value="CLionExternalConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\C-workspace\ECE568-Computer-Security-Lab\lab4" />
+      <recent name="C:\Users\ASUS\C-workspace\ECE568-Computer-Security-Lab\lab3" />
       <recent name="C:\Users\ASUS\C-workspace\ECE568-Computer-Security-Lab\ece568-lab2-2020f" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ASUS\C-workspace\ECE568-Computer-Security-Lab\lab3" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ASUS\C-workspace\ECE568-Computer-Security-Lab\ece568-lab2-2020f" />
     </key>
   </component>
@@ -102,9 +107,9 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
@@ -132,7 +137,14 @@
       <workItem from="1604683034388" duration="13385000" />
       <workItem from="1604947719092" duration="8132000" />
       <workItem from="1605116688709" duration="29000" />
-      <workItem from="1605121005716" duration="12301000" />
+      <workItem from="1605121005716" duration="12714000" />
+      <workItem from="1605281469827" duration="623000" />
+      <workItem from="1605294247338" duration="11610000" />
+      <workItem from="1605371407669" duration="16000" />
+      <workItem from="1605639181194" duration="11824000" />
+      <workItem from="1605717976459" duration="338000" />
+      <workItem from="1605899703663" duration="4170000" />
+      <workItem from="1606504382486" duration="12267000" />
     </task>
     <task id="LOCAL-00001" summary="client implementation">
       <created>1603490683095</created>
@@ -148,7 +160,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604951654081</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="lab 2 and lab3 part 1">
+      <created>1605133799210</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605133799210</updated>
+    </task>
+    <task id="LOCAL-00004" summary="lab3">
+      <created>1605305935722</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1605305935722</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,7 +195,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="client implementation" />
     <MESSAGE value="lab 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab 2" />
+    <MESSAGE value="lab 2 and lab3 part 1" />
+    <MESSAGE value="lab3" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="448" y="166" key="#Deployment" timestamp="1605121598448">
@@ -188,10 +216,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="620" y="154" width="1092" height="740" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603135494906" />
-    <state x="691" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605126310106">
+    <state x="691" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606505372984">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="691" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605126310106" />
+    <state x="691" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1606505372984" />
     <state x="723" y="350" key="#com.intellij.tools.ToolEditorDialog" timestamp="1603135224416">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -204,22 +232,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1024" y="257" key="EnvironmentVariablesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603135023805" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1605116719199">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1605903904911">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605116719199" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605903904911" />
+    <state x="184" y="86" key="MergeDialog" timestamp="1605901160366">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="86" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605901160366" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1603135278381">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603135278381" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604951657558">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605305938582">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604951657558" />
-    <state x="659" y="421" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604951674534">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605305938582" />
+    <state x="659" y="421" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605902776919">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="659" y="421" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604951674534" />
+    <state x="659" y="421" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605902776919" />
     <state x="853" y="256" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey" timestamp="1603135225068">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -232,9 +264,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1143" y="235" key="ftp.server.browser/0.0.1920.1040@0.0.1920.1040" timestamp="1603134318262" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604692029090">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1606513640394">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1604692029090" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606513640394" />
   </component>
 </project>

