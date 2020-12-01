@@ -1,0 +1,2 @@
+IP address of machine = 128.100.8.174
+dig @128.100.8.174 -p 3459 ecf.utoronto.ca

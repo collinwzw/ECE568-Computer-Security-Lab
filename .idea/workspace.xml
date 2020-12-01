@@ -28,21 +28,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa86fabc-0da5-47ee-ab65-928f58951bfa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lab3/part2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab4/dnsproxy_starter_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab4/part1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab4/script.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_11_9_14_54_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_11_9_14_54__Default_Changelist_.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab4/dnsproxy_starter_part3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab4/part2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/lab3_part1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/part1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/lab3_part2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/lab3_part3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/part3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/lab3_part4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/part4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/lab3_part5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/part5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/lab3_part6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/part6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/lab3_part7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/part7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/test" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/dnsproxy_starter.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/dnsproxy_starter_part2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/etc/named.conf" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/etc/named.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/etc/rndc.conf" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/etc/rndc.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/part4_starter.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/part4_starter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,12 +74,12 @@
     <property name="settings.editor.selected.configurable" value="CLionExternalConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\C-workspace\ECE568-Computer-Security-Lab\ece568-lab2-2020f" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ASUS\C-workspace\ECE568-Computer-Security-Lab\lab4" />
       <recent name="C:\Users\ASUS\C-workspace\ECE568-Computer-Security-Lab\lab3" />
-      <recent name="C:\Users\ASUS\C-workspace\ECE568-Computer-Security-Lab\ece568-lab2-2020f" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ASUS\C-workspace\ECE568-Computer-Security-Lab\ece568-lab2-2020f" />
     </key>
   </component>
@@ -107,9 +99,9 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
@@ -144,7 +136,9 @@
       <workItem from="1605639181194" duration="11824000" />
       <workItem from="1605717976459" duration="338000" />
       <workItem from="1605899703663" duration="4170000" />
-      <workItem from="1606504382486" duration="12267000" />
+      <workItem from="1606504382486" duration="13066000" />
+      <workItem from="1606839174393" duration="161000" />
+      <workItem from="1606849884504" duration="7753000" />
     </task>
     <task id="LOCAL-00001" summary="client implementation">
       <created>1603490683095</created>
@@ -174,7 +168,21 @@
       <option name="project" value="LOCAL" />
       <updated>1605305935722</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="lab 3 final version">
+      <created>1606516835535</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1606516835535</updated>
+    </task>
+    <task id="LOCAL-00006" summary="lab 4 part 1 and part 2">
+      <created>1606516852064</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1606516852064</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,7 +205,9 @@
     <MESSAGE value="lab 2" />
     <MESSAGE value="lab 2 and lab3 part 1" />
     <MESSAGE value="lab3" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab3" />
+    <MESSAGE value="lab 3 final version" />
+    <MESSAGE value="lab 4 part 1 and part 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab 4 part 1 and part 2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="448" y="166" key="#Deployment" timestamp="1605121598448">
@@ -232,10 +242,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1024" y="257" key="EnvironmentVariablesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603135023805" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1605903904911">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1606839342904">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605903904911" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606839342904" />
     <state x="184" y="86" key="MergeDialog" timestamp="1605901160366">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -244,14 +254,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603135278381" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605305938582">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606516896093">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605305938582" />
-    <state x="659" y="421" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605902776919">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606516896093" />
+    <state x="659" y="421" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606839326644">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="659" y="421" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605902776919" />
+    <state x="659" y="421" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606839326644" />
     <state x="853" y="256" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey" timestamp="1603135225068">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -264,6 +274,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1143" y="235" key="ftp.server.browser/0.0.1920.1040@0.0.1920.1040" timestamp="1603134318262" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1606851096004">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606851096004" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1606513640394">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

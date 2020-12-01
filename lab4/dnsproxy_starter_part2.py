@@ -36,10 +36,10 @@ print 'starting server'
 while True:
     #get data from listen port
     data, addr = s_client.recvfrom(1024)
-    #print 'Connected by'+ str(addr)
+    print 'Connected by'+ str(addr)
 
     response_listen = DNS(data)
-    #print response_listen.show()
+    print response_listen.show()
 
     #once we got data, we send to BIND
     s_send.sendto(str(data), (HOST, dns_port))

@@ -39,9 +39,13 @@ def getRandomTXID():
 Sends a UDP packet.
 '''
 def sendPacket(sock, packet, ip, port):
+
     sock.sendto(str(packet), (ip, port))
 
-
+def SendDNSReplies():
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
+    # dnsReply = DNS(rd=1, qd=DNSQR(qname='example.com'))
+    # sendPacket(sock, dnsPacket, my_ip, my_port)
 '''
 Example code that sends a DNS query using scapy.
 '''
@@ -49,12 +53,18 @@ def exampleSendDNSQuery():
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
     dnsPacket = DNS(rd=1, qd=DNSQR(qname='example.com'))
     sendPacket(sock, dnsPacket, my_ip, my_port)
+
+    #bind server is waiting now
+    #we should send attack packets
+
     response = sock.recv(4096)
     response = DNS(response)
     print "\n***** Packet Received from Remote Server *****"
-    print response.show()
+    #print response.show()
     print "***** End of Remote Server Packet *****\n"
 
 
 if __name__ == '__main__':
     exampleSendDNSQuery()
+
+
