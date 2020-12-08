@@ -28,13 +28,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa86fabc-0da5-47ee-ab65-928f58951bfa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lab4/dnsproxy_starter_part3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab4/part2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab4/DNSResponseFormat.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab4/dnsproxy_starter.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/dnsproxy_starter_part2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/dnsproxy_starter_part2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/dnsproxy_starter_part3.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/dnsproxy_starter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab4/etc/named.conf" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/etc/named.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab4/etc/rndc.conf" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/etc/rndc.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab4/part4_starter.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/part4_starter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/script.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/script.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +63,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lab4" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -138,7 +139,11 @@
       <workItem from="1605899703663" duration="4170000" />
       <workItem from="1606504382486" duration="13066000" />
       <workItem from="1606839174393" duration="161000" />
-      <workItem from="1606849884504" duration="7753000" />
+      <workItem from="1606849884504" duration="8601000" />
+      <workItem from="1606964126285" duration="681000" />
+      <workItem from="1607108875573" duration="10966000" />
+      <workItem from="1607121331258" duration="111000" />
+      <workItem from="1607454538210" duration="6769000" />
     </task>
     <task id="LOCAL-00001" summary="client implementation">
       <created>1603490683095</created>
@@ -182,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606516852064</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="lab 4 part 3 and incomplete part 4">
+      <created>1606857845941</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1606857845941</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,7 +219,8 @@
     <MESSAGE value="lab3" />
     <MESSAGE value="lab 3 final version" />
     <MESSAGE value="lab 4 part 1 and part 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab 4 part 1 and part 2" />
+    <MESSAGE value="lab 4 part 3 and incomplete part 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab 4 part 3 and incomplete part 4" />
   </component>
   <component name="WindowStateProjectService">
     <state x="448" y="166" key="#Deployment" timestamp="1605121598448">
@@ -226,10 +239,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="620" y="154" width="1092" height="740" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603135494906" />
-    <state x="691" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606505372984">
+    <state x="691" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607460431460">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="691" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1606505372984" />
+    <state x="691" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607460431460" />
     <state x="723" y="350" key="#com.intellij.tools.ToolEditorDialog" timestamp="1603135224416">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -242,10 +255,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1024" y="257" key="EnvironmentVariablesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603135023805" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1606839342904">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1607121438929">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606839342904" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607121438929" />
     <state x="184" y="86" key="MergeDialog" timestamp="1605901160366">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -254,10 +267,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603135278381" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606516896093">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606857851507">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606516896093" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606857851507" />
     <state x="659" y="421" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606839326644">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -274,13 +287,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1143" y="235" key="ftp.server.browser/0.0.1920.1040@0.0.1920.1040" timestamp="1603134318262" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1606851096004">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1607112809315">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606851096004" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1606513640394">
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607112809315" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607111860239">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606513640394" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607111860239" />
   </component>
 </project>

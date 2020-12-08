@@ -1,0 +1,74 @@
+###[ DNS ]###
+  id        = 0
+  qr        = 1L
+  opcode    = QUERY
+  aa        = 0L
+  tc        = 0L
+  rd        = 1L
+  ra        = 1L
+  z         = 0L
+  ad        = 0L
+  cd        = 0L
+  rcode     = ok
+  qdcount   = 1
+  ancount   = 1
+  nscount   = 3
+  arcount   = 3
+  \qd        \
+   |###[ DNS Question Record ]###
+   |  qname     = 'ecf.utoronto.ca.'
+   |  qtype     = A
+   |  qclass    = IN
+  \an        \
+   |###[ DNS Resource Record ]###
+   |  rrname    = 'ecf.utoronto.ca.'
+   |  type      = A
+   |  rclass    = IN
+   |  ttl       = 84839
+   |  rdlen     = 4
+   |  rdata     = '128.100.8.15'
+  \ns        \
+   |###[ DNS Resource Record ]###
+   |  rrname    = 'ecf.utoronto.ca.'
+   |  type      = NS
+   |  rclass    = IN
+   |  ttl       = 84531
+   |  rdlen     = 17
+   |  rdata     = 'ns2.utoronto.ca.'
+   |###[ DNS Resource Record ]###
+   |  rrname    = 'ecf.utoronto.ca.'
+   |  type      = NS
+   |  rclass    = IN
+   |  ttl       = 84531
+   |  rdlen     = 17
+   |  rdata     = 'ns7.utoronto.ca.'
+   |###[ DNS Resource Record ]###
+   |  rrname    = 'ecf.utoronto.ca.'
+   |  type      = NS
+   |  rclass    = IN
+   |  ttl       = 84531
+   |  rdlen     = 20
+   |  rdata     = 'bay.cs.utoronto.ca.'
+  \ar        \
+   |###[ DNS Resource Record ]###
+   |  rrname    = 'bay.cs.utoronto.ca.'
+   |  type      = A
+   |  rclass    = IN
+   |  ttl       = 84531
+   |  rdlen     = 4
+   |  rdata     = '128.100.1.1'
+   |###[ DNS Resource Record ]###
+   |  rrname    = 'ns2.utoronto.ca.'
+   |  type      = A
+   |  rclass    = IN
+   |  ttl       = 84531
+   |  rdlen     = 4
+   |  rdata     = '128.100.72.168'
+   |###[ DNS Resource Record ]###
+   |  rrname    = 'ns7.utoronto.ca.'
+   |  type      = A
+   |  rclass    = IN
+   |  ttl       = 84531
+   |  rdlen     = 4
+   |  rdata     = '162.243.71.42'
+

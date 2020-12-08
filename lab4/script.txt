@@ -1,4 +1,4 @@
-/share/copy/ece568f/lab4/run_bind.sh -c /u/a/wang2213/Desktop/Workspace/ECE568-Computer-Security-Lab/lab4/etc
+/share/copy/ece568f/lab4/run_bind.sh -c /u/a/wang2213/Desktop/Workspace/ECE568-Computer-Security-Lab/lab4/etc/named.conf
 
 
 dig @128.100.8.174 -p 3751 ecf.utoronto.ca MX

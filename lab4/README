@@ -1,0 +1,22 @@
+#Ziwen Wang,1007350242,collinziwen@mail.utoronto.ca
+#Mauris Winata,1007546023,mauris.winata@mail.utoronto.ca
+
+1. To get IP address of ecf.utoronto.ca, we called dig ecf.utoronto.ca. We
+looked at output of this command to get name server and mail server IP address.
+To direct to our Bind server, we use command:
+dig @<IP of our ECF machine> -p <BIND listen-on port defined in named.conf> ecf.utoronto.ca
+example:
+dig @128.100.8.174 -p 5568 ecf.utoronto.ca
+
+2. We establish a port that is listening on the query by using sock. Once we recieve the query, we forward to
+the Bind server listen-on port defined in named.conf. We receive the response from Bind server using function
+socket.recv() and forward to client.
+
+3. We establish a port that is listening on the query by using sock. Once we recieve the query, we forward to
+the Bind server listen-on port defined in named.conf. We receive the response from Bind server using function
+socket.recv() and modify the response by using scapy. We than send the fake response back to client.
+
+4.We firstly send a real query to google.ca to get a template DNS packet response. We then using scapy to modify
+the template DNS response to what we want. We then generate random string as subdomain of example.com and then
+send the query to Bind server. We forge the fake replies with random transaction IDs and send to Bind server as
+fake DNS response. We send 100 fake responses for every subdomain query we sent.
